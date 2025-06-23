@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #FFD700; /* Gold */
-            --secondary: #C0A040; /* Dark Gold */
+            --primary: #FFD700;
+            --secondary: #C0A040;
             --accent: #FFD700;
             --dark: #121212;
             --darker: #0A0A0A;
@@ -22,10 +22,6 @@
             --warning: #DC3545;
             --gradient: linear-gradient(135deg, #FFD700 0%, #C0A040 100%);
             --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            --crypto-usdt: #26A17B;
-            --crypto-btc: #F7931A;
-            --crypto-ton: #0088CC;
-            --crypto-bnb: #F0B90B;
         }
         
         * {
@@ -39,20 +35,12 @@
             background-color: var(--darker);
             color: var(--text);
             line-height: 1.6;
-            background-image: radial-gradient(circle at 1px 1px, rgba(255, 215, 0, 0.05) 1px, transparent 0);
-            background-size: 20px 20px;
         }
         
         .container {
             max-width: 900px;
             margin: 40px auto;
             padding: 0 20px;
-            animation: fadeIn 0.5s ease-out;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
         }
         
         .card {
@@ -61,13 +49,7 @@
             box-shadow: var(--card-shadow);
             overflow: hidden;
             margin-bottom: 30px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: 1px solid rgba(255, 215, 0, 0.1);
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
         }
         
         .card-header {
@@ -75,46 +57,23 @@
             color: var(--primary);
             padding: 25px 30px;
             position: relative;
-            overflow: hidden;
             border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-        }
-        
-        .card-header::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,215,0,0.1) 0%, rgba(255,215,0,0) 70%);
-            transform: rotate(30deg);
-            animation: shine 3s infinite;
-        }
-        
-        @keyframes shine {
-            0% { transform: translateX(-100%) rotate(30deg); }
-            100% { transform: translateX(100%) rotate(30deg); }
         }
         
         .card-header h2 {
             font-weight: 600;
             font-size: 28px;
-            position: relative;
             display: flex;
             align-items: center;
-            color: var(--primary);
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
         }
         
         .card-header h2 i {
             margin-right: 15px;
             font-size: 32px;
-            color: var(--primary);
         }
         
         .card-body {
             padding: 30px;
-            background-color: var(--dark);
         }
         
         .form-group {
@@ -126,7 +85,6 @@
             margin-bottom: 8px;
             font-weight: 500;
             color: var(--primary);
-            font-size: 15px;
         }
         
         .form-control {
@@ -135,20 +93,11 @@
             font-size: 16px;
             border: 1px solid rgba(255, 215, 0, 0.3);
             border-radius: 10px;
-            transition: all 0.3s;
             background-color: var(--light);
-            font-family: 'Poppins', sans-serif;
             color: var(--text);
         }
         
-        .form-control:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
-            outline: none;
-        }
-        
         .price-display {
-            font-size: 17px;
             font-weight: 700;
             color: var(--primary);
             padding: 18px;
@@ -165,16 +114,12 @@
             border: 1px solid rgba(255, 215, 0, 0.2);
             border-radius: 12px;
             min-height: 180px;
-            white-space: pre-line;
-            line-height: 1.8;
-            color: var(--text);
         }
         
         .benefit-item {
             margin-bottom: 10px;
             position: relative;
             padding-left: 30px;
-            font-size: 15px;
         }
         
         .benefit-item:before {
@@ -194,13 +139,6 @@
             background-color: var(--light);
             border-radius: 12px;
             border: 1px solid rgba(255, 215, 0, 0.2);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            animation: slideUp 0.4s ease-out;
-        }
-        
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
         }
         
         .payment-header {
@@ -220,13 +158,6 @@
             justify-content: center;
             margin-right: 15px;
             font-size: 22px;
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
-        }
-        
-        .payment-title {
-            font-size: 22px;
-            font-weight: 600;
-            color: var(--primary);
         }
         
         .qr-container {
@@ -235,7 +166,6 @@
             padding: 25px;
             background: var(--dark);
             border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(255, 215, 0, 0.2);
         }
         
@@ -245,21 +175,15 @@
             margin: 0 auto;
             background-color: white;
             padding: 15px;
-            border: 1px solid rgba(255, 215, 0, 0.3);
             border-radius: 8px;
         }
         
-        .wallet-address {
-            background: var(--lighter);
+        .admin-note {
+            background-color: rgba(220, 53, 69, 0.1);
             padding: 18px;
             border-radius: 10px;
-            font-family: 'Courier New', monospace;
-            word-break: break-all;
-            margin: 20px 0;
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            position: relative;
-            font-size: 15px;
-            color: var(--text);
+            margin-top: 25px;
+            border-left: 4px solid var(--warning);
         }
         
         .btn {
@@ -272,36 +196,11 @@
             cursor: pointer;
             transition: all 0.3s;
             border: none;
-            font-family: 'Poppins', sans-serif;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.2));
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        
-        .btn:hover::after {
-            opacity: 1;
         }
         
         .btn-primary {
             background: var(--gradient);
             color: var(--dark);
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
         }
         
         .btn-block {
@@ -309,189 +208,6 @@
             width: 100%;
         }
         
-        .btn-copy {
-            background: var(--gradient);
-            color: var(--dark);
-            padding: 10px 18px;
-            font-size: 14px;
-            margin-left: 15px;
-            border-radius: 8px;
-            font-weight: 500;
-        }
-        
-        .btn-copy:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
-        }
-        
-        .admin-note {
-            background-color: rgba(220, 53, 69, 0.1);
-            padding: 18px;
-            border-radius: 10px;
-            margin-top: 25px;
-            border-left: 4px solid var(--warning);
-            font-size: 14px;
-            color: var(--text);
-        }
-        
-        .admin-note strong {
-            color: var(--warning);
-        }
-        
-        .hidden {
-            display: none;
-        }
-        
-        .telegram-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #0088cc;
-            color: white;
-            padding: 10px 18px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 500;
-            margin-top: 10px;
-            transition: all 0.3s;
-        }
-        
-        .telegram-btn i {
-            margin-right: 8px;
-            font-size: 18px;
-        }
-        
-        .telegram-btn:hover {
-            background-color: #0077b5;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 136, 204, 0.3);
-        }
-        
-        .package-badge {
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            background: var(--gradient);
-            color: var(--dark);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            box-shadow: 0 3px 10px rgba(255, 215, 0, 0.3);
-        }
-        
-        /* Crypto Options */
-        .crypto-options {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-        
-        .crypto-option {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 15px;
-            background: var(--light);
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s;
-            border: 1px solid transparent;
-        }
-        
-        .crypto-option:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .crypto-option.active {
-            border-color: var(--primary);
-            background: rgba(255, 215, 0, 0.05);
-        }
-        
-        .crypto-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        
-        .crypto-icon.usdt {
-            background-color: var(--crypto-usdt);
-            color: white;
-        }
-        
-        .crypto-icon.btc {
-            background-color: var(--crypto-btc);
-            color: white;
-        }
-        
-        .crypto-icon.ton {
-            background-color: var(--crypto-ton);
-            color: white;
-        }
-        
-        .crypto-icon.bnb {
-            background-color: var(--crypto-bnb);
-            color: black;
-        }
-        
-        .crypto-name {
-            font-size: 14px;
-            font-weight: 500;
-            margin-top: 5px;
-            color: var(--text);
-        }
-        
-        .network-selector {
-            margin-top: 15px;
-            width: 100%;
-            padding: 10px;
-            background: var(--light);
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            border-radius: 8px;
-            color: var(--text);
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        @media (max-width: 768px) {
-            .card-body {
-                padding: 20px;
-            }
-            
-            .payment-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .payment-icon {
-                margin-bottom: 15px;
-                margin-right: 0;
-            }
-            
-            .card-header h2 {
-                font-size: 24px;
-            }
-            
-            .payment-title {
-                font-size: 20px;
-            }
-            
-            .btn {
-                padding: 12px 20px;
-            }
-            
-            .crypto-options {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        /* Loading spinner */
         .spinner {
             display: none;
             width: 24px;
@@ -507,7 +223,6 @@
             to { transform: rotate(360deg); }
         }
         
-        /* Confirmation modal */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -536,49 +251,12 @@
             max-width: 500px;
             width: 90%;
             text-align: center;
-            transform: translateY(20px);
-            transition: all 0.3s;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-            border: 1px solid rgba(255, 215, 0, 0.2);
-        }
-        
-        .modal-overlay.active .modal-content {
-            transform: translateY(0);
         }
         
         .modal-icon {
             font-size: 60px;
             color: var(--primary);
             margin-bottom: 20px;
-        }
-        
-        .modal-title {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: var(--primary);
-        }
-        
-        .modal-message {
-            font-size: 16px;
-            margin-bottom: 25px;
-            color: var(--text);
-        }
-        
-        .modal-btn {
-            padding: 12px 25px;
-            background: var(--gradient);
-            color: var(--dark);
-            border: none;
-            border-radius: 8px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .modal-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
         }
     </style>
 </head>
@@ -587,7 +265,6 @@
         <div class="card">
             <div class="card-header">
                 <h2><i class="fas fa-crown"></i>Mark Renaldy</h2>
-                <div class="package-badge">EXCLUSIVE</div>
             </div>
             
             <div class="card-body">
@@ -600,7 +277,7 @@
                             <option value="premium">Premium</option>
                             <option value="vip">VIP</option>
                             <option value="vvip">VVIP</option>
-                            <option value="supreme">Supreme</option>
+                   <option value="supreme">Supreme</option>
                             <option value="komunitas">Komunitas</option>
                         </select>
                     </div>
@@ -608,6 +285,7 @@
                     <div class="form-group">
                         <label class="form-label">Harga:</label>
                         <div id="priceDisplay" class="price-display">Silakan pilih paket membership</div>
+                        <input type="hidden" id="nominalValue" value="">
                     </div>
                     
                     <div class="form-group">
@@ -621,8 +299,8 @@
                         <label for="paymentMethod" class="form-label">Metode Pembayaran:</label>
                         <select id="paymentMethod" name="paymentMethod" class="form-control" required>
                             <option value="">-- Pilih Metode Pembayaran --</option>
-                            <option value="qris">QRIS (Transfer Bank/Dompet Digital)</option>
-                            <option value="kripto">Kripto (Multi Jaringan)</option>
+                            <option value="qris">QRIS</option>
+                            <option value="ewallet">E-Wallet</option>
                         </select>
                     </div>
                     
@@ -639,94 +317,51 @@
                             <div class="payment-title">Pembayaran via QRIS</div>
                         </div>
                         
-                        <p>Silakan scan QR code berikut menggunakan aplikasi bank atau dompet digital Anda:</p>
+                        <p>Silakan scan QR code berikut:</p>
                         
                         <div class="qr-container">
-                            <div class="qr-code">
-                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=00020101021126670016COM.NOBUBANK.WWW01189360050300000879140214033282223326590303UMI51440014ID.CO.QRIS.WWW0215ID20253827871610303UMI5204481253033605802ID5920MITRASENJA%20OK22535666007CIREBON61054501362070703A0163049C59" alt="QR Code Pembayaran" style="width:100%;height:100%;">
+                            <div class="qr-code" id="dynamicQrCode"></div>
+                            <div id="qrisDetails" style="margin-top: 15px;">
+                                <p>Nominal: <span id="qrisAmount"></span></p>
+                                <p>Kadaluarsa: <span id="qrisExpiry"></span></p>
                             </div>
-                            <p style="margin-top: 15px; font-size: 15px; color: var(--text-dark);">QRIS - Mitra Senja OK</p>
                         </div>
                         
                         <div class="admin-note">
-                            <strong>Penting:</strong> Setelah melakukan pembayaran, harap kirim bukti transfer ke admin Telegram:
-                            <a href="https://t.me/markrenaldyvvip" target="_blank" class="telegram-btn">
-                                <i class="fab fa-telegram"></i> @markrenaldyvvip
-                            </a>
+                            <strong>Penting:</strong> Pembayaran diverifikasi otomatis.
                         </div>
                         
-                        <button type="button" id="orderBtnQris" class="btn btn-primary btn-block" style="margin-top: 25px;">
-                            Konfirmasi Pembayaran <i class="fas fa-check"></i>
+                        <button type="button" id="checkPaymentBtn" class="btn btn-primary btn-block" style="margin-top: 25px;">
+                            Cek Status Pembayaran <i class="fas fa-sync-alt"></i>
                             <div class="spinner" id="spinnerQris"></div>
                         </button>
                     </div>
                     
-                    <!-- Kripto Payment -->
-                    <div id="kriptoPayment" class="payment-method">
+                    <!-- E-Wallet Payment -->
+                    <div id="ewalletPayment" class="payment-method">
                         <div class="payment-header">
                             <div class="payment-icon">
-                                <i class="fab fa-bitcoin"></i>
+                                <i class="fas fa-wallet"></i>
                             </div>
-                            <div class="payment-title">Pembayaran via Kripto</div>
+                            <div class="payment-title">Pembayaran via E-Wallet</div>
                         </div>
                         
-                        <p>Pilih jenis kripto yang ingin digunakan:</p>
-                        
-                        <div class="crypto-options" id="cryptoOptions">
-                            <div class="crypto-option" data-crypto="usdt">
-                                <div class="crypto-icon usdt">
-                                    <i class="fab fa-ethereum"></i>
-                                </div>
-                                <span class="crypto-name">USDT</span>
-                            </div>
-                            <div class="crypto-option" data-crypto="btc">
-                                <div class="crypto-icon btc">
-                                    <i class="fab fa-bitcoin"></i>
-                                </div>
-                                <span class="crypto-name">Bitcoin</span>
-                            </div>
-                            <div class="crypto-option" data-crypto="ton">
-                                <div class="crypto-icon ton">
-                                    <i class="fas fa-coins"></i>
-                                </div>
-                                <span class="crypto-name">TON</span>
-                            </div>
-                            <div class="crypto-option" data-crypto="bnb">
-                                <div class="crypto-icon bnb">
-                                    <i class="fab fa-btc"></i>
-                                </div>
-                                <span class="crypto-name">BNB</span>
-                            </div>
+                        <div id="ewalletInstructions">
+                            <p>Klik tombol di bawah untuk pembayaran:</p>
+                            <button type="button" id="payEwalletBtn" class="btn btn-primary btn-block" style="margin-top: 15px;">
+                                Bayar via E-Wallet <i class="fas fa-external-link-alt"></i>
+                            </button>
                         </div>
                         
-                        <div id="networkSelection" style="display: none;">
-                            <label class="form-label">Pilih Jaringan:</label>
-                            <select id="networkSelect" class="network-selector">
-                                <!-- Networks will be populated by JavaScript -->
-                            </select>
+                        <div id="ewalletDetails" style="display: none; margin-top: 20px;">
+                            <p>Nominal: <strong id="ewalletAmount"></strong></p>
+                            <p>Kadaluarsa: <strong id="ewalletExpiry"></strong></p>
+                            <p>Status: <strong id="ewalletStatus">Pending</strong></p>
                         </div>
                         
-                        <div id="walletInfo" style="display: none; margin-top: 20px;">
-                            <label class="form-label">Alamat Wallet:</label>
-                            <div class="wallet-address" id="walletAddress">
-                                Loading address...
-                                <button type="button" id="copyWalletBtn" class="btn-copy">
-                                    <i class="fas fa-copy"></i> Salin
-                                </button>
-                            </div>
-                            <p id="networkNote" style="font-size: 14px; color: var(--text-dark); margin-top: 5px;"></p>
-                        </div>
-                        
-                        <div class="admin-note">
-                            <strong>Penting:</strong> Setelah melakukan transfer, harap kirim bukti transaksi (TxID) ke admin Telegram:
-                            <a href="https://t.me/markrenaldyvvip" target="_blank" class="telegram-btn">
-                                <i class="fab fa-telegram"></i> @markrenaldyvvip
-                            </a>
-                        </div>
-                        
-                        <button type="button" id="orderBtnKripto" class="btn btn-primary btn-block" style="margin-top: 25px;">
-                            Konfirmasi Pembayaran <i class="fas fa-check"></i>
-                            <div class="spinner" id="spinnerKripto"></div>
+                        <button type="button" id="checkEwalletBtn" class="btn btn-primary btn-block" style="margin-top: 25px; display: none;">
+                            Cek Status Pembayaran <i class="fas fa-sync-alt"></i>
+                            <div class="spinner" id="spinnerEwallet"></div>
                         </button>
                     </div>
                 </form>
@@ -740,59 +375,63 @@
             <div class="modal-icon">
                 <i class="fas fa-check-circle"></i>
             </div>
-            <h3 class="modal-title">Pembayaran Berhasil Dikonfirmasi!</h3>
-            <p class="modal-message" id="modalMessage">Admin akan segera memverifikasi pembayaran Anda dan mengaktifkan membership dalam waktu 1x24 jam.</p>
-            <button class="modal-btn" id="modalCloseBtn">Tutup</button>
+            <h3 class="modal-title">Pembayaran Berhasil!</h3>
+            <p class="modal-message" id="modalMessage"></p>
+            <button class="btn btn-primary" id="modalCloseBtn">Tutup</button>
         </div>
     </div>
-    
+
     <script>
-        // Package prices and benefits
+        // Konfigurasi
+        const config = {
+            apiKey: 'yX29FZiE1oUQEQFOngbcP6N3M30ybR2hYWh5VlbDBG1DLdPs6zhlnqW02UPJWC7lvMGDK7pxmq56hfULEj9bIgY0FuHtMwaXD4iz',
+            telegram: {
+                botToken: '7956118210:AAGNrov7WWbKbKBEpQLMsNU4nZRTNfAzT38',
+                chatId: '6263193579'
+            }
+        };
+
+        // Data Paket
         const packages = {
             standard: {
-                price: "Rp 30.000 / $5/ RM10",
+                price: "Rp 30.000",
+                nominal: 30000,
                 benefits: [
-                    "500 video  (no request)",
+                    "500 video (no request)",
                     "Akses Permanen",
-                    "No Update",
-                    "Support dasar via Telegram",
-                    "Akses Bot Telegram"
+                    "Support dasar via Telegram"
                 ]
             },
             premium: {
-                price: "Rp 50.000 / $10 / RM15",
+                price: "Rp 50.000",
+                nominal: 50000,
                 benefits: [
                     "1500 video premium",
                     "Akses Permanen",
-                    "No Update",
-                    "Support Maintenance",
-                    "Bebas Request Konten beberapa  ",
-                    "Akses Bot Telegram"
+                    "Support Maintenance"
                 ]
             },
             vip: {
-                price: "Rp 100.000 / $20 / RM30",
+                price: "Rp 100.000",
+                nominal: 100000,
                 benefits: [
                     "7000 video Exclusive",
                     "Akses Permanen",
-                    "No Update",
-                    "Support Maintenance",
-                    "Bebas request konten Sebagian",
-                    "Akses Bot Telegram"
+                    "Support Maintenance"
                 ]
             },
             vvip: {
-                price: "Rp 150.000 / $25 / RM50",
+                price: "Rp 150.000",
+                nominal: 150000,
                 benefits: [
-                    "Semua video Exclusive(Sekitar 20.000 Video Lebih)",
+                    "20.000+ Video Exclusive",
                     "Akses Permanen",
-                    "No Update",
-                    "Support Maintenance",
-                    "Akses Bot Telegram"
+                    "Support Premium"
                 ]
-            },
-            supreme: {
-                price: "Rp 200.000 / $30 / RM60",
+           },
+                        supreme: {
+                price: "Rp 200.000",
+                nominal: 200000,
                 benefits: [
                     "Semua video Exclusive",
                     "Update konten real-time + bonus",
@@ -804,7 +443,8 @@
                 ]
             },
             komunitas: {
-                price: "Rp 350.000 / $45 / RM100",
+                price: "Rp 350.000",
+                nominal: 350000,
                 benefits: [
                     "Semua video Exclusive",
                     "Akses Permanen",
@@ -819,298 +459,377 @@
                 ]
             }
         };
-        
-        // Crypto wallet information
-        const cryptoWallets = {
-            usdt: {
-                trc20: {
-                    address: "TQmvu5imB42MfoA1Yoe61G8K2rV6yF7WWD",
-                    note: "Pastikan jaringan yang digunakan adalah TRC20 dan token yang dikirim adalah USDT"
-                },
-                erc20: {
-                    address: "0x5f7261C583523f2EEAAf226a82372eb5C27B2AE6",
-                    note: "Pastikan jaringan yang digunakan adalah ERC20 dan token yang dikirim adalah USDT"
-                }
-            },
-            btc: {
-                bitcoin: {
-                    address: "bc1qrqj2zzjaz4m9ytuhfv80zmpxsgd5xdsjmm9qsd",
-                    note: "Pastikan mengirim ke alamat Bitcoin (BTC)"
-                }
-            },
-            ton: {
-               toncoin: {
-                    address: "UQCoVJD2Hrldl2ea9Y3zUz67KjiCELPYS7CZtt0wgdwwIcBA",
-                    note: "Pastikan mengirim ke alamat CCoiCoin"
-                }
-            },
-            bnb: {
-                bnbcoin: {
-                    address: "0x5f7261c583523f2eeaaf226a82372eb5c27b2ae6",
-                    note: "Pastikan jaringan yang digunakan BNB"
-                }
-            }
+
+        // State Transaksi
+        let currentTransaction = {
+            id: null,
+            reff_id: null,
+            method: null,
+            nominal: null,
+            status: null,
+            expired_at: null
         };
-        
-        // DOM elements
+
+        // DOM Elements
         const packageSelect = document.getElementById('package');
         const priceDisplay = document.getElementById('priceDisplay');
+        const nominalValue = document.getElementById('nominalValue');
         const benefitsDisplay = document.getElementById('benefitsDisplay');
         const paymentMethod = document.getElementById('paymentMethod');
         const nextBtn = document.getElementById('nextBtn');
         const qrisPayment = document.getElementById('qrisPayment');
-        const kriptoPayment = document.getElementById('kriptoPayment');
-        const cryptoOptions = document.getElementById('cryptoOptions');
-        const networkSelection = document.getElementById('networkSelection');
-        const networkSelect = document.getElementById('networkSelect');
-        const walletInfo = document.getElementById('walletInfo');
-        const walletAddress = document.getElementById('walletAddress');
-        const networkNote = document.getElementById('networkNote');
-        const copyWalletBtn = document.getElementById('copyWalletBtn');
-        const orderBtnQris = document.getElementById('orderBtnQris');
-        const orderBtnKripto = document.getElementById('orderBtnKripto');
+        const ewalletPayment = document.getElementById('ewalletPayment');
+        const dynamicQrCode = document.getElementById('dynamicQrCode');
+        const qrisAmount = document.getElementById('qrisAmount');
+        const qrisExpiry = document.getElementById('qrisExpiry');
+        const payEwalletBtn = document.getElementById('payEwalletBtn');
+        const ewalletInstructions = document.getElementById('ewalletInstructions');
+        const ewalletDetails = document.getElementById('ewalletDetails');
+        const ewalletAmount = document.getElementById('ewalletAmount');
+        const ewalletExpiry = document.getElementById('ewalletExpiry');
+        const ewalletStatus = document.getElementById('ewalletStatus');
+        const checkPaymentBtn = document.getElementById('checkPaymentBtn');
+        const checkEwalletBtn = document.getElementById('checkEwalletBtn');
         const spinnerQris = document.getElementById('spinnerQris');
-        const spinnerKripto = document.getElementById('spinnerKripto');
+        const spinnerEwallet = document.getElementById('spinnerEwallet');
         const confirmationModal = document.getElementById('confirmationModal');
         const modalMessage = document.getElementById('modalMessage');
         const modalCloseBtn = document.getElementById('modalCloseBtn');
-        
-        // Current selected crypto
-        let selectedCrypto = null;
-        
-        // Format benefits as HTML
-        function formatBenefits(benefitsArray) {
-            return benefitsArray.map(benefit => 
-                `<div class="benefit-item">${benefit}</div>`
-            ).join('');
-        }
-        
-        // Update price and benefits when package is selected
-        packageSelect.addEventListener('change', function() {
-            const selectedPackage = this.value;
+
+        // Event Listeners
+        packageSelect.addEventListener('change', updatePackageInfo);
+        nextBtn.addEventListener('click', showPaymentMethod);
+        payEwalletBtn.addEventListener('click', createEwalletPayment);
+        checkPaymentBtn.addEventListener('click', checkPaymentStatus);
+        checkEwalletBtn.addEventListener('click', checkPaymentStatus);
+        modalCloseBtn.addEventListener('click', () => {
+            confirmationModal.classList.remove('active');
+        });
+
+        // Fungsi Utama
+        function updatePackageInfo() {
+            const selectedPackage = packageSelect.value;
             if (selectedPackage && packages[selectedPackage]) {
                 priceDisplay.textContent = packages[selectedPackage].price;
-                benefitsDisplay.innerHTML = formatBenefits(packages[selectedPackage].benefits);
+                nominalValue.value = packages[selectedPackage].nominal;
+                benefitsDisplay.innerHTML = packages[selectedPackage].benefits
+                    .map(benefit => `<div class="benefit-item">${benefit}</div>`)
+                    .join('');
             } else {
                 priceDisplay.textContent = 'Silakan pilih paket membership';
+                nominalValue.value = '';
                 benefitsDisplay.innerHTML = 'Pilih paket membership untuk melihat benefit lengkap';
             }
-        });
-        
-        // Show payment method when Next is clicked
-        nextBtn.addEventListener('click', function() {
+        }
+
+        function showPaymentMethod() {
+            if (!validateSelection()) return;
+
+            hideAllPaymentMethods();
+            
+            if (paymentMethod.value === 'qris') {
+                qrisPayment.style.display = 'block';
+                createQrisPayment();
+            } else if (paymentMethod.value === 'ewallet') {
+                ewalletPayment.style.display = 'block';
+                resetEwalletPayment();
+            }
+        }
+
+        function validateSelection() {
             if (!packageSelect.value) {
-                showAlert('Silakan pilih paket membership terlebih dahulu');
-                return;
+                showAlert('Silakan pilih paket terlebih dahulu');
+                return false;
             }
             
             if (!paymentMethod.value) {
-                showAlert('Silakan pilih metode pembayaran terlebih dahulu');
+                showAlert('Silakan pilih metode pembayaran');
+                return false;
+            }
+            
+            return true;
+        }
+
+        function hideAllPaymentMethods() {
+            qrisPayment.style.display = 'none';
+            ewalletPayment.style.display = 'none';
+        }
+
+        async function createQrisPayment() {
+            const nominal = nominalValue.value;
+            if (!nominal) {
+                showAlert('Nominal tidak valid');
                 return;
             }
+
+            const reff_id = 'MR' + Date.now();
             
-            // Hide all payment methods first
-            qrisPayment.style.display = 'none';
-            kriptoPayment.style.display = 'none';
+            showLoading(spinnerQris, checkPaymentBtn);
             
-            // Show selected payment method
-            if (paymentMethod.value === 'qris') {
-                qrisPayment.style.display = 'block';
-                // Scroll to payment method
-                qrisPayment.scrollIntoView({ behavior: 'smooth' });
-            } else if (paymentMethod.value === 'kripto') {
-                kriptoPayment.style.display = 'block';
-                // Reset crypto selection
-                resetCryptoSelection();
-                // Scroll to payment method
-                kriptoPayment.scrollIntoView({ behavior: 'smooth' });
+            try {
+                const response = await callAtlanticApi({
+                    endpoint: '/deposit/create',
+                    data: {
+                        reff_id,
+                        nominal,
+                        type: 'ewallet',
+                        method: 'qris'
+                    }
+                });
+
+                if (response.status && response.data) {
+                    currentTransaction = {
+                        id: response.data.id,
+                        reff_id: response.data.reff_id,
+                        method: 'qris',
+                        nominal: response.data.nominal,
+                        status: response.data.status,
+                        expired_at: response.data.expired_at
+                    };
+
+                    displayQrisPayment(response.data);
+                    sendTelegramNotification('qris');
+                    startPaymentChecking();
+                } else {
+                    throw new Error(response.message || 'Gagal membuat transaksi QRIS');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showAlert('Gagal membuat pembayaran QRIS');
+            } finally {
+                hideLoading(spinnerQris, checkPaymentBtn);
             }
-        });
-        
-        // Reset crypto selection
-        function resetCryptoSelection() {
-            selectedCrypto = null;
-            document.querySelectorAll('.crypto-option').forEach(option => {
-                option.classList.remove('active');
-            });
-            networkSelection.style.display = 'none';
-            walletInfo.style.display = 'none';
         }
-        
-        // Handle crypto option selection
-        cryptoOptions.addEventListener('click', function(e) {
-            const option = e.target.closest('.crypto-option');
-            if (!option) return;
+
+        async function createEwalletPayment() {
+            const nominal = nominalValue.value;
+            if (!nominal) {
+                showAlert('Nominal tidak valid');
+                return;
+            }
+
+            const reff_id = 'MR' + Date.now();
             
-            // Set active option
-            document.querySelectorAll('.crypto-option').forEach(opt => {
-                opt.classList.remove('active');
-            });
-            option.classList.add('active');
+            showLoading(spinnerEwallet, payEwalletBtn);
             
-            // Get selected crypto
-            selectedCrypto = option.getAttribute('data-crypto');
-            
-            // Populate network options
-            populateNetworkOptions(selectedCrypto);
-            
-            // Show network selection
-            networkSelection.style.display = 'block';
-        });
-        
-        // Populate network options based on selected crypto
-        function populateNetworkOptions(crypto) {
-            networkSelect.innerHTML = '';
-            
-            const networks = Object.keys(cryptoWallets[crypto]);
-            
-            networks.forEach(network => {
-                const option = document.createElement('option');
-                option.value = network;
-                option.textContent = network.toUpperCase();
-                networkSelect.appendChild(option);
-            });
-            
-            // Trigger network change
-            networkSelect.dispatchEvent(new Event('change'));
+            try {
+                const response = await callAtlanticApi({
+                    endpoint: '/deposit/create',
+                    data: {
+                        reff_id,
+                        nominal,
+                        type: 'ewallet',
+                        method: 'dana'
+                    }
+                });
+
+                if (response.status && response.data) {
+                    currentTransaction = {
+                        id: response.data.id,
+                        reff_id: response.data.reff_id,
+                        method: 'ewallet',
+                        nominal: response.data.nominal,
+                        status: response.data.status,
+                        expired_at: response.data.expired_at,
+                        payment_url: response.data.url
+                    };
+
+                    displayEwalletPayment(response.data);
+                    sendTelegramNotification('ewallet');
+                    startPaymentChecking();
+                } else {
+                    throw new Error(response.message || 'Gagal membuat transaksi E-Wallet');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showAlert('Gagal membuat pembayaran E-Wallet');
+            } finally {
+                hideLoading(spinnerEwallet, payEwalletBtn);
+            }
         }
-        
-        // Handle network selection change
-        networkSelect.addEventListener('change', function() {
-            if (!selectedCrypto) return;
-            
-            const network = this.value;
-            const walletData = cryptoWallets[selectedCrypto][network];
-            
-            // Update wallet address and note
-            walletAddress.innerHTML = `${walletData.address} <button type="button" id="copyWalletBtn" class="btn-copy"><i class="fas fa-copy"></i> Salin</button>`;
-            networkNote.textContent = walletData.note;
-            
-            // Re-attach copy event listener
-            document.getElementById('copyWalletBtn').addEventListener('click', copyWalletAddress);
-            
-            // Show wallet info
-            walletInfo.style.display = 'block';
-        });
-        
-        // Copy wallet address to clipboard
-        function copyWalletAddress() {
-            const textToCopy = walletAddress.textContent.replace('Salin', '').trim();
-            navigator.clipboard.writeText(textToCopy).then(() => {
-                showAlert('Alamat wallet berhasil disalin ke clipboard!');
-            }).catch(err => {
-                console.error('Gagal menyalin alamat wallet:', err);
-                showAlert('Gagal menyalin alamat wallet. Silakan copy manual.');
+
+        async function callAtlanticApi({ endpoint, data }) {
+            const formData = new URLSearchParams();
+            formData.append('api_key', config.apiKey);
+            for (const key in data) {
+                formData.append(key, data[key]);
+            }
+
+            const response = await fetch(`https://atlantich2h.com${endpoint}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: formData
             });
+
+            return await response.json();
         }
-        
-        // Initialize copy button
-        copyWalletBtn.addEventListener('click', copyWalletAddress);
-        
-        // Show alert message
+
+        function displayQrisPayment(data) {
+            dynamicQrCode.innerHTML = `<img src="${data.qr_image}" alt="QR Code" style="width:100%;height:100%;">`;
+            qrisAmount.textContent = formatCurrency(data.nominal);
+            qrisExpiry.textContent = formatDateTime(data.expired_at);
+        }
+
+        function displayEwalletPayment(data) {
+            ewalletInstructions.style.display = 'none';
+            ewalletDetails.style.display = 'block';
+            checkEwalletBtn.style.display = 'block';
+            
+            ewalletAmount.textContent = formatCurrency(data.nominal);
+            ewalletExpiry.textContent = formatDateTime(data.expired_at);
+            ewalletStatus.textContent = 'Pending';
+            
+            window.open(data.url, '_blank');
+        }
+
+        function resetEwalletPayment() {
+            ewalletInstructions.style.display = 'block';
+            ewalletDetails.style.display = 'none';
+            checkEwalletBtn.style.display = 'none';
+            currentTransaction = {
+                id: null,
+                reff_id: null,
+                method: null,
+                nominal: null,
+                status: null,
+                expired_at: null
+            };
+        }
+
+        async function checkPaymentStatus() {
+            if (!currentTransaction.id) {
+                showAlert('Tidak ada transaksi aktif');
+                return;
+            }
+
+            const spinner = currentTransaction.method === 'qris' ? spinnerQris : spinnerEwallet;
+            const button = currentTransaction.method === 'qris' ? checkPaymentBtn : checkEwalletBtn;
+            
+            showLoading(spinner, button);
+            
+            try {
+                const response = await callAtlanticApi({
+                    endpoint: '/deposit/status',
+                    data: {
+                        reff_id: currentTransaction.reff_id
+                    }
+                });
+
+                if (response.status) {
+                    if (response.data.status === 'completed') {
+                        handleSuccessfulPayment();
+                    } else {
+                        showAlert('Pembayaran masih diproses');
+                    }
+                } else {
+                    throw new Error('Gagal memeriksa status');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showAlert('Gagal memeriksa status pembayaran');
+            } finally {
+                hideLoading(spinner, button);
+            }
+        }
+
+        function handleSuccessfulPayment() {
+            showConfirmationModal(
+                `✅ Pembayaran ${formatCurrency(currentTransaction.nominal)} berhasil!`
+            );
+            
+            if (currentTransaction.method === 'qris') {
+                qrisPayment.querySelector('.admin-note').innerHTML = `
+                    <strong>Pembayaran berhasil!</strong> Membership sedang diproses.
+                `;
+            } else {
+                ewalletStatus.textContent = 'Completed';
+                ewalletStatus.style.color = 'var(--success)';
+            }
+            
+            clearInterval(paymentCheckInterval);
+        }
+
+        function startPaymentChecking() {
+            if (paymentCheckInterval) {
+                clearInterval(paymentCheckInterval);
+            }
+            
+            paymentCheckInterval = setInterval(() => {
+                checkPaymentStatus();
+            }, 30000);
+        }
+
+        async function sendTelegramNotification(paymentType) {
+            const packageName = packageSelect.options[packageSelect.selectedIndex].text;
+            const amount = currentTransaction.nominal;
+            
+            const message = `💳 *Pembayaran Baru*  
+Paket: ${packageName}  
+Metode: ${paymentType === 'qris' ? 'QRIS' : 'E-Wallet'}  
+Nominal: Rp ${amount.toLocaleString('id-ID')}  
+ID Transaksi: ${currentTransaction.reff_id}`;
+
+            try {
+                await fetch(`https://api.telegram.org/bot${config.telegram.botToken}/sendMessage`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        chat_id: config.telegram.chatId,
+                        text: message,
+                        parse_mode: 'Markdown'
+                    })
+                });
+            } catch (error) {
+                console.error('Error sending Telegram:', error);
+            }
+        }
+
+        // Helper Functions
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+                minimumFractionDigits: 0
+            }).format(amount);
+        }
+
+        function formatDateTime(dateTimeString) {
+            const options = { 
+                day: '2-digit', 
+                month: 'long', 
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: false
+            };
+            return new Date(dateTimeString).toLocaleDateString('id-ID', options);
+        }
+
+        function showLoading(spinner, button) {
+            spinner.style.display = 'inline-block';
+            button.disabled = true;
+        }
+
+        function hideLoading(spinner, button) {
+            spinner.style.display = 'none';
+            button.disabled = false;
+        }
+
         function showAlert(message) {
-            const alertDiv = document.createElement('div');
-            alertDiv.style.position = 'fixed';
-            alertDiv.style.bottom = '20px';
-            alertDiv.style.left = '50%';
-            alertDiv.style.transform = 'translateX(-50%)';
-            alertDiv.style.backgroundColor = '#333';
-            alertDiv.style.color = 'white';
-            alertDiv.style.padding = '12px 24px';
-            alertDiv.style.borderRadius = '8px';
-            alertDiv.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
-            alertDiv.style.zIndex = '1000';
-            alertDiv.style.animation = 'fadeIn 0.3s';
-            alertDiv.textContent = message;
-            
-            document.body.appendChild(alertDiv);
-            
-            setTimeout(() => {
-                alertDiv.style.animation = 'fadeOut 0.3s';
-                setTimeout(() => {
-                    document.body.removeChild(alertDiv);
-                }, 300);
-            }, 3000);
+            alert(message);
         }
-        
-        // Show confirmation modal
+
         function showConfirmationModal(message) {
             modalMessage.textContent = message;
             confirmationModal.classList.add('active');
         }
-        
-        // Close modal
-        modalCloseBtn.addEventListener('click', () => {
-            confirmationModal.classList.remove('active');
-        });
-        
-        // Send order notification to Telegram
-        async function sendOrderNotification() {
-            const selectedPackage = packageSelect.options[packageSelect.selectedIndex].text;
-            const paymentMethodText = paymentMethod.options[paymentMethod.selectedIndex].text;
-            const price = packages[packageSelect.value].price;
-            
-            // For crypto payments, include selected crypto and network
-            let paymentDetails = paymentMethodText;
-            if (paymentMethod.value === 'kripto' && selectedCrypto) {
-                const network = networkSelect.value;
-                paymentDetails = `Kripto (${selectedCrypto.toUpperCase()} ${network.toUpperCase()})`;
-            }
-            
-            // Show loading spinner
-            const isQris = paymentMethod.value === 'qris';
-            const spinner = isQris ? spinnerQris : spinnerKripto;
-            const button = isQris ? orderBtnQris : orderBtnKripto;
-            
-            spinner.style.display = 'inline-block';
-            button.disabled = true;
-            
-            // Telegram bot API
-            const botToken = '7956118210:AAGNrov7WWbKbKBEpQLMsNU4nZRTNfAzT38';
-            const chatId = '6263193579';
-            
-            const message = `🛒 *NEW ORDER* 🛒\n\n` +
-                           `📦 *Package:* ${selectedPackage}\n` +
-                           `💰 *Price:* ${price}\n` +
-                           `💳 *Payment Method:* ${paymentDetails}\n\n` +
-                           `_Please verify the payment and activate membership_`;
-            
-            try {
-                const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}&parse_mode=Markdown`);
-                const data = await response.json();
-                
-                if (data.ok) {
-                    showConfirmationModal(
-                        `✅ Pesanan Anda untuk Paket ${selectedPackage} telah tercatat!\n\n` +
-                        `Silakan selesaikan pembayaran dan kirim bukti ke @markrenaldyvvip\n\n` +
-                        `Admin akan segera memproses setelah pembayaran diverifikasi (1x24 jam).`
-                    );
-                } else {
-                    throw new Error('Telegram API error');
-                }
-            } catch (error) {
-                console.error('Error sending to Telegram:', error);
-                showAlert('⚠️ Gagal mengirim konfirmasi. Silakan hubungi admin manual via Telegram.');
-            } finally {
-                spinner.style.display = 'none';
-                button.disabled = false;
-            }
-        }
-        
-        // Order buttons
-        orderBtnQris.addEventListener('click', sendOrderNotification);
-        orderBtnKripto.addEventListener('click', sendOrderNotification);
-        
-        // Add animation to buttons on hover
-        document.querySelectorAll('.btn').forEach(button => {
-            button.addEventListener('mouseenter', () => {
-                button.style.transform = 'translateY(-3px)';
-            });
-            
-            button.addEventListener('mouseleave', () => {
-                button.style.transform = 'translateY(0)';
-            });
-        });
+
+        // Inisialisasi
+        let paymentCheckInterval = null;
     </script>
 </body>
 </html>
